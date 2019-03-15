@@ -51,4 +51,17 @@ public class Personnage {
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
+
+    public String toString(){
+        return "Je suis un Personnage";
+    }
+
+
+    public int attSpe(int dommage) {
+        return dommage;
+    }
+
+    public int attBas(int effect){
+        return effect;
+    }
 }

@@ -7,22 +7,64 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        Personnage guerrier = new Guerrier(0, 0, 0, 0);
+        Personnage joueur1 = new Personnage(0,0,0,0);
+        Personnage joueur2 = new Personnage(0,0,0,0);
+        Personnage guerrier = new Guerrier(0,0,0,0);
+        Personnage rodeur = new Rodeur(0,0,0,0);
+        Personnage mage = new Mage(0,0,0,0);
 
         System.out.println("Création du personnage Joueur 1");
         System.out.println("Veuillez choisir la classe de votre personnage (1 : Guerrier, 2 : Rodeur, 3 : Mage)");
-        int choix = sc.nextInt();
+        int choixPerso1 = sc.nextInt();
         System.out.println("Niveau du personnage :");
-        guerrier.setNiveau(sc.nextInt());
+        joueur1.setNiveau(sc.nextInt());
         System.out.println("Force du personnage :");
-        guerrier.setForce(sc.nextInt());
+        joueur1.setForce(sc.nextInt());
         System.out.println("Agilité du personnage :");
-        guerrier.setAgilite(sc.nextInt());
+        joueur1.setAgilite(sc.nextInt());
         System.out.println("Intelligence du personnage :");
-        guerrier.setIntelligence(sc.nextInt());
-        System.out.println("Je suis le guerrier de niveau " + guerrier.getNiveau() + ", j'ai " + guerrier.getVie() +
-                " de vitalité, " + guerrier.getForce() + " de force, " + guerrier.getAgilite() + " d'agilité et " + guerrier.getIntelligence() +
-                " d'intelligence.");
+        joueur1.setIntelligence(sc.nextInt());
+        if (choixPerso1 == 1)
+            System.out.println(guerrier.toString() + joueur1.getNiveau() + ", j'ai " + joueur1.getVie() +
+                    " de vitalité, " + joueur1.getForce() + " de force, " + joueur1.getAgilite() + " d'agilité et " + joueur1.getIntelligence() +
+                    " d'intelligence.");
+        else if (choixPerso1 == 2)
+            System.out.println(rodeur.toString() + joueur1.getNiveau() + ", j'ai " + joueur1.getVie() +
+                    " de vitalité, " + joueur1.getForce() + " de force, " + joueur1.getAgilite() + " d'agilité et " + joueur1.getIntelligence() +
+                    " d'intelligence.");
+        else if (choixPerso1 ==3)
+            System.out.println(mage.toString() + joueur1.getNiveau() + ", j'ai " + joueur1.getVie() +
+                    " de vitalité, " + joueur1.getForce() + " de force, " + joueur1.getAgilite() + " d'agilité et " + joueur1.getIntelligence() +
+                    " d'intelligence.");
+        else
+            System.err.println("Vous n'avez pas choisi de classe.");
+
+        System.out.println("Création du personnage Joueur 2");
+        System.out.println("Veuillez choisir la classe de votre personnage (1 : Guerrier, 2 : Rodeur, 3 : Mage)");
+        int choixPerso2 = sc.nextInt();
+        System.out.println("Niveau du personnage :");
+        joueur2.setNiveau(sc.nextInt());
+        System.out.println("Force du personnage :");
+        joueur2.setForce(sc.nextInt());
+        System.out.println("Agilité du personnage :");
+        joueur2.setAgilite(sc.nextInt());
+        System.out.println("Intelligence du personnage :");
+        joueur2.setIntelligence(sc.nextInt());
+        if (choixPerso2 == 1)
+            System.out.println(guerrier.toString() + joueur2.getNiveau() + ", j'ai " + joueur2.getVie() +
+                    " de vitalité, " + joueur2.getForce() + " de force, " + joueur2.getAgilite() + " d'agilité et " + joueur2.getIntelligence() +
+                    " d'intelligence.");
+        else if (choixPerso2 == 2)
+            System.out.println(rodeur.toString() + joueur2.getNiveau() + ", j'ai " + joueur2.getVie() +
+                    " de vitalité, " + joueur2.getForce() + " de force, " + joueur2.getAgilite() + " d'agilité et " + joueur2.getIntelligence() +
+                    " d'intelligence.");
+        else if (choixPerso2 ==3)
+            System.out.println(mage.toString() + joueur2.getNiveau() + ", j'ai " + joueur2.getVie() +
+                    " de vitalité, " + joueur2.getForce() + " de force, " + joueur2.getAgilite() + " d'agilité et " + joueur2.getIntelligence() +
+                    " d'intelligence.");
+        else
+            System.err.println("Vous n'avez pas choisi de classe.");
+
+        System.out.println("Joueur 1 (" + joueur1.getVie() + " Vitalité) veuillez choisir votre action (1 : Attaque Basique, 2 : Attaque Spéciale");
     }
 }
