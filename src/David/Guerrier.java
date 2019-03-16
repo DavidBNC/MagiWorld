@@ -9,4 +9,9 @@ public class Guerrier extends Personnage {
     public String toString(){
         return "SALUT ! Je suis le puissant guerrier ";
     }
+
+    public int attSpe(Guerrier guerrier) {
+        int dommage = getVie() - getForce();
+        return dommage;
+    }
 }

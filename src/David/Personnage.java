@@ -57,11 +57,13 @@ public class Personnage {
     }
 
 
-    public int attSpe(int dommage) {
+    public int attBas() {
+        int dommage = 0;
         return dommage;
     }
 
-    public int attBas(int effect){
+    public int attSpe(){
+        int effect = 0;
         return effect;
     }
 }
